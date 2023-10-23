@@ -1,4 +1,4 @@
-from operations import add, rest, multiply
+from operations import add, rest, multiply, divide
 def game():
     score = 0
     while True:
@@ -6,6 +6,7 @@ def game():
             '\n1. Add'
             '\n2. Subtract'
             '\n3. Multiplication'
+            '\n4. Division'
               
             '\n0. Exit')
         
@@ -39,6 +40,15 @@ def game():
                 print('Correct!!')  
             else:
                 print('Incorrect')
+        
+        elif option ==4:
+            result= divide(num_1, num_2)
+            if result== answer: 
+                score +=1
+                print('Correct!!')  
+            else:
+                print('Incorrect')
+        
         
                     
     print(f'======== Game Over ========'
