@@ -1,4 +1,4 @@
-from operations import add, rest, multiply
+from operations import add, rest, multiply, divide
 def game():
     score = 0
     while True:
