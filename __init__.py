@@ -1,10 +1,12 @@
-from operations import add
+from operations import add, rest
 def game():
     score = 0
     while True:
         print('======== Menu ========'
             '\n1. Add'
+            '\n2. Subtract'
             '\n0. Exit')
+        
         option = int(input('\nChoice an option: '))
         if option == 0:
             break
@@ -16,10 +18,19 @@ def game():
             result = add(num_1, num_2)
             if result == answer:
                 score += 1
-                print('Correct!!')
-            
+                print('Correct!!')  
             else:
                 print('Incorrect')
+        
+        elif option ==2: 
+            result= rest(num_1, num_2)
+            if result== answer: 
+                score +=1
+                print('Correct!!')  
+            else:
+                print('Incorrect')
+        
+                    
     print(f'======== Game Over ========'
           f'\nYou score is {score}'
           '\nKeep going!')
