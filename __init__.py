@@ -1,10 +1,12 @@
-from operations import add, rest
+from operations import add, rest, multiply
 def game():
     score = 0
     while True:
         print('======== Menu ========'
             '\n1. Add'
             '\n2. Subtract'
+            '\n3. Multiplication'
+              
             '\n0. Exit')
         
         option = int(input('\nChoice an option: '))
@@ -24,6 +26,14 @@ def game():
         
         elif option ==2: 
             result= rest(num_1, num_2)
+            if result== answer: 
+                score +=1
+                print('Correct!!')  
+            else:
+                print('Incorrect')
+                
+        elif option ==3:
+            result= multiply(num_1, num_2)
             if result== answer: 
                 score +=1
                 print('Correct!!')  
