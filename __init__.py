@@ -1,4 +1,4 @@
-from operations import add, rest, multiply, divide, potencia
+from operations import add, rest, multiply, divide, potencia, modulo
 def game():
     score = 0
     while True:
@@ -7,7 +7,8 @@ def game():
             '\n2. Subtract'
             '\n3. Multiplication'
             '\n4. Division'
-            '\n5. Potencia'
+            '\n5. Power'
+            '\n6. Module'
               
             '\n0. Exit')
         
@@ -52,6 +53,14 @@ def game():
         
         elif option ==5:
             result= potencia(num_1, num_2)
+            if result== answer: 
+                score +=1
+                print('Correct!!')  
+            else:
+                print('Incorrect')
+        
+        elif option ==6:
+            result= modulo(num_1, num_2)
             if result== answer: 
                 score +=1
                 print('Correct!!')  
